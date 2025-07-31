@@ -510,7 +510,7 @@ define(`SHMEM_CXX_WAIT_UNTIL_ALL',
 SHMEM_CXX_DEFINE_FOR_SYNC(`SHMEM_CXX_WAIT_UNTIL_ALL')
 
 define(`SHMEM_CXX_WAIT_UNTIL_ALL_VECTOR',
-`static inline void shmem_wait_until_all_vector($2 *ivars, size_t nelems, const int *status, int cmp, cont $2 *cmp_values) {
+`static inline void shmem_wait_until_all_vector($2 *ivars, size_t nelems, const int *status, int cmp, const $2 *cmp_values) {
     shmem_$1_wait_until_all_vector(ivars, nelems, status, cmp, cmp_values);
 }')dnl
 SHMEM_CXX_DEFINE_FOR_SYNC(`SHMEM_CXX_WAIT_UNTIL_ALL_VECTOR')
